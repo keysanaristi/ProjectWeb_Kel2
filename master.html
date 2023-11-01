@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Data Dosen UHW Perbanas Surabaya</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        body {
+            background-image: url("triangles.png");
+            font-family: "Poppins", sans-serif;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Master Data Dosen UHW Perbanas Surabaya</h1>
+        <input type="text" id="search" class="form-control mb-3" placeholder="Cari Data">
+        <a href="karyawan.html"><input type ="button" value ="Tambah"></a><br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col">Jabatan</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Nesti</td>
+                    <td>Perempuan</td>
+                    <td>Dekan</td>
+                    <td>anacantik@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Keysa</td>
+                    <td>Perempuan</td>
+                    <td>Rektor</td>
+                    <td>keysacantikpol@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Saipul</td>
+                    <td>Laki-laki</td>
+                    <td>Kaprodi</td>
+                    <td>saipulganteng@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('search');
+        const addDataButton = document.getElementById('addData');
+        const table = document.querySelector('table');
+        const tableRows = table.querySelectorAll('tbody tr');
+
+        searchInput.addEventListener('input', function () {
+            const searchText = searchInput.value.toLowerCase();
+
+            tableRows.forEach((row) => {
+                const rowData = row.textContent.toLowerCase();
+                if (rowData.includes(searchText)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+body {
+    background-image: url("triangles.png");
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding: 60px;
+    border: 1px solid #9a007867;
+    border-radius: 5px;
+    background-color: #9a007867;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #79006d;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        position: absolute;
+        left: 575px;
+    }
+
+input[type="submit"]:hover {
+    background-color: #ff0ad2;
+}
